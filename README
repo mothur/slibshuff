@@ -1,0 +1,74 @@
+// 
+// S-LIBSHUFF: A program for pairwise comparison of sequence libraries.
+// Version 1.22, released on May 17, 2006
+// Copyright (C) 2003, 2004, 2005, 2006 Bret Larget and Patrick D. Schloss 
+//
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 2 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+//
+// This distribution contains the following files.
+//
+//   COPYING --- the GNU General Public Licence
+//   makefile --- file useful for easy compilation of the software
+//   README --- this file
+//   s-libshuff.C --- the source code
+//
+// INSTALLATION
+//
+// Linux users with GNU gcc can compile the program by typing:
+//
+//   make
+//
+// at the prompt.  Others may need to edit the makefile.
+//
+// RUNNING THE PROGRAM
+//
+//  Usage: s-libshuff [-s1 seedOne] [-s2 seedTwo] [-n numPermutations] [-d] [-z size] [-e numFamilyPermutations] <file>
+//  Options:
+//  -s1: first seed for random number generator, any positive integer (default is 1234).
+//  -s2: second seed for random number generator, any positive integer (default is 5678).
+//  -n: number of permutations for each permutation test (default is 10000).
+//  -d: use the discrete approximation for calculation (default is integral form).
+//  -z: size of increment for discrete calculation (only used if -d set; default is 0.01).
+//  -l: lower triangular distance matrix (default is a square matrix).
+//  -e: number of complete permutations to estimate family-wise error rate (default is 0).
+//  <file> is a symmetric distance matrix as produced by PHYLIP.
+//
+// VERSION HISTORY
+//
+// Version 1.22
+//   outputs delCxy values
+//	 Released May 16, 2006
+// Version 1.21
+//	 supports lower-triangular mega3 formatted distance matrices
+//	 Released April 22, 2005
+// Version 1.2
+// 	 corrected a small bug that has gone largely undetected that behaves poorly when numGroups > 9
+// 	 added output file feature that contains coverage values for input distance matrix
+// 	 released initial version of manual
+// 	 Released November 5, 2004
+// Version 1.1
+// 	 added ability to use lower triangular matrix for input file
+// 	 Released May 25, 2004
+// Version 1.0
+//   fixed error in sCalculate (forgetting j!=i)
+//   changed the output format
+// Version 0.2
+//   Released January 16, 2003
+// Version 0.1 written by Bret Larget and Patrick D. Schloss
+//   Released January 9, 2003
+// Version 0.0 written by Bret Larget and Patrick D. Schloss
+//   Released December 28, 2003
+
+
